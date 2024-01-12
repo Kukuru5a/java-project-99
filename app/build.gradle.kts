@@ -2,6 +2,8 @@ plugins {
     java
     id("org.springframework.boot") version "3.2.1"
     id("io.spring.dependency-management") version "1.1.4"
+    id("io.freefair.lombok") version "8.3"
+
 }
 
 group = "hexlet.code"
@@ -41,6 +43,8 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation(platform("org.junit:junit-bom:5.10.1"))
     testImplementation("org.junit.jupiter:junit-jupiter:5.10.1")
+
+    implementation("com.zaxxer:HikariCP:5.0.1")
 }
 
 tasks.withType<Test> {
