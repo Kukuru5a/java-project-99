@@ -1,9 +1,11 @@
-FROM gradle:8.3-jdk20
+FROM eclipse-temurin:20-jdk
 
 WORKDIR /app
 
-COPY /app .
+COPY / .
 
-RUN gradle installDist
+RUN ./gradlew installDist
+
+EXPOSE 7070
 
 CMD ./build/install/app/bin/app
