@@ -4,19 +4,27 @@ import hexlet.code.dto.UserCreateDTO;
 import hexlet.code.dto.UserDTO;
 import hexlet.code.dto.UserUpdateDTO;
 import hexlet.code.model.User;
+import java.util.ArrayList;
+import java.util.List;
 import javax.annotation.processing.Generated;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-01-28T14:19:47+0600",
+    date = "2024-02-04T11:07:50+0600",
     comments = "version: 1.6.0.Beta1, compiler: IncrementalProcessingEnvironment from gradle-language-java-8.4.jar, environment: Java 20.0.2 (Oracle Corporation)"
 )
 @Component
 public class UserMapperImpl extends UserMapper {
 
+    @Autowired
+    private JsonNullableMapper jsonNullableMapper;
+
     @Override
     public User map(UserCreateDTO dto) {
+        encryptCreatePassword( dto );
+
         if ( dto == null ) {
             return null;
         }
@@ -29,6 +37,19 @@ public class UserMapperImpl extends UserMapper {
         user.setEmail( dto.getEmail() );
 
         return user;
+    }
+
+    @Override
+    public void update(UserUpdateDTO dto, User model) {
+        if ( dto == null ) {
+            return;
+        }
+
+        encryptUpdatePassword( dto, model );
+
+        if ( jsonNullableMapper.isPresent( dto.getEmail() ) ) {
+            model.setEmail( jsonNullableMapper.unwrap( dto.getEmail() ) );
+        }
     }
 
     @Override
@@ -49,13 +70,16 @@ public class UserMapperImpl extends UserMapper {
     }
 
     @Override
-    public void update(UserUpdateDTO dto, User usr) {
-        if ( dto == null ) {
-            return;
+    public List<UserDTO> map(List<User> models) {
+        if ( models == null ) {
+            return null;
         }
 
-        if ( dto.getEmail() != null ) {
-            usr.setEmail( dto.getEmail() );
+        List<UserDTO> list = new ArrayList<UserDTO>( models.size() );
+        for ( User user : models ) {
+            list.add( map( user ) );
         }
+
+        return list;
     }
 }
