@@ -22,6 +22,9 @@ import static org.springframework.security.test.web.servlet.request.SecurityMock
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import util.EntityGenerator;
+
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import static net.javacrumbs.jsonunit.assertj.JsonAssertions.assertThatJson;
@@ -115,7 +118,7 @@ public class UserControllerTest {
         var data = new UserUpdateDTO();
         data.setEmail(JsonNullable.of("anyMail@mail.ru"));
         data.setPassword(JsonNullable.of("myNewPassword"));
-        var request = MockMvcRequestBuilders.put("/api/users/" +
+        var request = put("/api/users/" +
                 testUser.getId()).with(token)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(om.writeValueAsString(data));
@@ -125,5 +128,43 @@ public class UserControllerTest {
         assertThat(encoder.matches("myNewPassword", user.getPassword())).isTrue();
     }
 
+    @Test
+    public void testUpdateWrongUser() throws Exception {
+        var anotherUser = entityGenerator.generateUser();
+        userRepository.save(anotherUser);
+        token = jwt().jwt(builder -> builder.subject(anotherUser.getEmail()));
+        var data = new UserUpdateDTO();
+        data.setEmail(JsonNullable.of("newMail@mail.ru"));
+        data.setPassword(JsonNullable.of("newPassword"));
+        var request = put("/api/users/" + testUser.getId())
+                .with(token)
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(om.writeValueAsString(data));
+        mockMvc.perform(request)
+                .andExpect(status().isForbidden());
+        assertThat(userRepository.findByEmail(testUser.getEmail())).isPresent();
+        assertThat(userRepository.findByEmail("newMail@mail.ru")).isEmpty();
+    }
+
+    @Test
+    public void testDelete() throws Exception {
+        var request = delete("/api/users/" + testUser.getId())
+                .with(token);
+        mockMvc.perform(request)
+                .andExpect(status().isNoContent());
+        assertThat(userRepository.existsById(testUser.getId())).isFalse();
+    }
+
+    @Test
+    public void testDeleteWrongUser() throws Exception {
+        var anotherUser = entityGenerator.generateUser();
+        userRepository.save(anotherUser);
+        token = jwt().jwt(builder -> builder.subject(anotherUser.getEmail()));
+        var request = delete("/api/users/" + testUser.getId())
+                .with(token);
+        mockMvc.perform(request)
+                .andExpect(status().isForbidden());
+        assertThat(userRepository.existsById(testUser.getId())).isTrue();
+    }
 
 }
