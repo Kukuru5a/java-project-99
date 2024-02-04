@@ -34,6 +34,9 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-configuration-processor")
     implementation("org.springframework.boot:spring-boot-starter-security")
 
+    implementation("org.springframework.boot:spring-boot-starter-security:3.0.4")
+    implementation("org.springframework.boot:spring-boot-starter-oauth2-resource-server:3.1.0")
+
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0")
 
     implementation("org.openapitools:jackson-databind-nullable:0.2.6")

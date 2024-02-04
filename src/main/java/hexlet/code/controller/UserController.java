@@ -26,6 +26,7 @@ public class UserController {
     private UserMapper userMapper;
 
     @GetMapping("")
+    @ResponseStatus(HttpStatus.OK)
     public List<UserDTO> userList() {
         List<User> users = userRepository.findAll();
         return users.stream().map(u->userMapper.map(u)).toList();
@@ -58,5 +59,11 @@ public class UserController {
         userRepository.save(user);
         var userDTO = userMapper.map(user);
         return userDTO;
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public void delete(@PathVariable Long id) {
+        userRepository.deleteById(id);
     }
 }
