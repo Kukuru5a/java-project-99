@@ -1,8 +1,8 @@
 package controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import hexlet.code.dto.UserCreateDTO;
-import hexlet.code.dto.UserUpdateDTO;
+import hexlet.code.dto.user.UserCreateDTO;
+import hexlet.code.dto.user.UserUpdateDTO;
 import hexlet.code.model.User;
 import hexlet.code.repositories.UserRepository;
 import org.junit.jupiter.api.AfterEach;

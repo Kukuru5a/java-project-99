@@ -1,6 +1,5 @@
 package hexlet.code.componnt;
 
-import hexlet.code.dto.UserCreateDTO;
 import hexlet.code.mapper.UserMapper;
 import hexlet.code.repositories.UserRepository;
 import lombok.AllArgsConstructor;
