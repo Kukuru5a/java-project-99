@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="hexlet.code.controller.TaskStatusControllerTest" tests="5" skipped="0" failures="1" errors="0" timestamp="2024-02-06T17:53:13" hostname="MacBook-Air-Roma.local" time="0.272">
+  <properties/>
+  <testcase name="testShow()" classname="hexlet.code.controller.TaskStatusControllerTest" time="0.056">
+    <failure message="java.lang.NullPointerException: Cannot invoke &quot;java.time.LocalDate.format(java.time.format.DateTimeFormatter)&quot; because the return value of &quot;hexlet.code.model.TaskStatus.getCreatedAt()&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;java.time.LocalDate.format(java.time.format.DateTimeFormatter)&quot; because the return value of &quot;hexlet.code.model.TaskStatus.getCreatedAt()&quot; is null
+	at hexlet.code.controller.TaskStatusControllerTest.lambda$testShow$4(TaskStatusControllerTest.java:95)
+	at net.javacrumbs.jsonunit.assertj.JsonAssert.lambda$and$0(JsonAssert.java:105)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1006)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at net.javacrumbs.jsonunit.assertj.JsonAssert.and(JsonAssert.java:105)
+	at hexlet.code.controller.TaskStatusControllerTest.testShow(TaskStatusControllerTest.java:90)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:119)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:94)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:89)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy2/jdk.proxy2.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <testcase name="testGetList()" classname="hexlet.code.controller.TaskStatusControllerTest" time="0.044"/>
+  <testcase name="testCreate()" classname="hexlet.code.controller.TaskStatusControllerTest" time="0.068"/>
+  <testcase name="testDelete()" classname="hexlet.code.controller.TaskStatusControllerTest" time="0.048"/>
+  <testcase name="testUpdate()" classname="hexlet.code.controller.TaskStatusControllerTest" time="0.046"/>
+  <system-out><![CDATA[Hibernate: insert into task_statuses (created_at,name,slug,id) values (?,?,?,default)
+Hibernate: insert into users (created_at,email,first_name,last_name,password_origin,updated_at,id) values (?,?,?,?,?,?,default)
+?[2m2024-02-06T23:53:13.571+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.security.web.FilterChainProxy       ?[0;39m ?[2m:?[0;39m Securing GET /api/task_statuses/8
+?[2m2024-02-06T23:53:13.573+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.security.web.FilterChainProxy       ?[0;39m ?[2m:?[0;39m Secured GET /api/task_statuses/8
+?[2m2024-02-06T23:53:13.573+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36ms.w.s.m.m.a.RequestMappingHandlerMapping?[0;39m ?[2m:?[0;39m Mapped to hexlet.code.controller.TaskStatusController#show(Long)
+Hibernate: select ts1_0.id,ts1_0.created_at,ts1_0.name,ts1_0.slug from task_statuses ts1_0 where ts1_0.id=?
+?[2m2024-02-06T23:53:13.584+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mm.m.a.RequestResponseBodyMethodProcessor?[0;39m ?[2m:?[0;39m Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+?[2m2024-02-06T23:53:13.584+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mm.m.a.RequestResponseBodyMethodProcessor?[0;39m ?[2m:?[0;39m Writing [hexlet.code.dto.taskStatus.TaskStatusDTO@7d7b1e3]
+Hibernate: select ts1_0.id,ts1_0.created_at,ts1_0.name,ts1_0.slug from task_statuses ts1_0
+Hibernate: delete from task_statuses where id=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.first_name,u1_0.last_name,u1_0.password_origin,u1_0.updated_at from users u1_0
+Hibernate: delete from users where id=?
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/task_statuses/8
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = hexlet.code.controller.TaskStatusController
+           Method = hexlet.code.controller.TaskStatusController#show(Long)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
+     Content type = application/json
+             Body = {"id":8,"name":"dolores","slug":"incidunt_sit"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+Hibernate: insert into task_statuses (created_at,name,slug,id) values (?,?,?,default)
+Hibernate: insert into users (created_at,email,first_name,last_name,password_origin,updated_at,id) values (?,?,?,?,?,?,default)
+?[2m2024-02-06T23:53:13.626+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.security.web.FilterChainProxy       ?[0;39m ?[2m:?[0;39m Securing GET /api/task_statuses
+?[2m2024-02-06T23:53:13.628+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.security.web.FilterChainProxy       ?[0;39m ?[2m:?[0;39m Secured GET /api/task_statuses
+?[2m2024-02-06T23:53:13.628+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36ms.w.s.m.m.a.RequestMappingHandlerMapping?[0;39m ?[2m:?[0;39m Mapped to hexlet.code.controller.TaskStatusController#getList()
+Hibernate: select ts1_0.id,ts1_0.created_at,ts1_0.name,ts1_0.slug from task_statuses ts1_0
+?[2m2024-02-06T23:53:13.637+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor ?[0;39m ?[2m:?[0;39m Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+?[2m2024-02-06T23:53:13.637+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.w.s.m.m.a.HttpEntityMethodProcessor ?[0;39m ?[2m:?[0;39m Writing [[hexlet.code.dto.taskStatus.TaskStatusDTO@7674aa02]]
+Hibernate: select ts1_0.id,ts1_0.created_at,ts1_0.name,ts1_0.slug from task_statuses ts1_0
+Hibernate: delete from task_statuses where id=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.first_name,u1_0.last_name,u1_0.password_origin,u1_0.updated_at from users u1_0
+Hibernate: delete from users where id=?
+Hibernate: insert into task_statuses (created_at,name,slug,id) values (?,?,?,default)
+Hibernate: insert into users (created_at,email,first_name,last_name,password_origin,updated_at,id) values (?,?,?,?,?,?,default)
+?[2m2024-02-06T23:53:13.682+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.security.web.FilterChainProxy       ?[0;39m ?[2m:?[0;39m Securing POST /api/task_statuses
+?[2m2024-02-06T23:53:13.685+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.security.web.FilterChainProxy       ?[0;39m ?[2m:?[0;39m Secured POST /api/task_statuses
+?[2m2024-02-06T23:53:13.685+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36ms.w.s.m.m.a.RequestMappingHandlerMapping?[0;39m ?[2m:?[0;39m Mapped to hexlet.code.controller.TaskStatusController#create(TaskStatusCreateDTO)
+?[2m2024-02-06T23:53:13.687+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mm.m.a.RequestResponseBodyMethodProcessor?[0;39m ?[2m:?[0;39m Read "application/json;charset=UTF-8" to [hexlet.code.dto.taskStatus.TaskStatusCreateDTO@36c19960]
+Hibernate: insert into task_statuses (created_at,name,slug,id) values (?,?,?,default)
+?[2m2024-02-06T23:53:13.705+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mm.m.a.RequestResponseBodyMethodProcessor?[0;39m ?[2m:?[0;39m Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+?[2m2024-02-06T23:53:13.706+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mm.m.a.RequestResponseBodyMethodProcessor?[0;39m ?[2m:?[0;39m Writing [hexlet.code.dto.taskStatus.TaskStatusDTO@95acda5]
+Hibernate: select ts1_0.id,ts1_0.created_at,ts1_0.name,ts1_0.slug from task_statuses ts1_0 where ts1_0.slug=?
+Hibernate: select ts1_0.id,ts1_0.created_at,ts1_0.name,ts1_0.slug from task_statuses ts1_0
+Hibernate: delete from task_statuses where id=?
+Hibernate: delete from task_statuses where id=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.first_name,u1_0.last_name,u1_0.password_origin,u1_0.updated_at from users u1_0
+Hibernate: delete from users where id=?
+Hibernate: insert into task_statuses (created_at,name,slug,id) values (?,?,?,default)
+Hibernate: insert into users (created_at,email,first_name,last_name,password_origin,updated_at,id) values (?,?,?,?,?,?,default)
+?[2m2024-02-06T23:53:13.741+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.security.web.FilterChainProxy       ?[0;39m ?[2m:?[0;39m Securing DELETE /api/task_statuses/12
+?[2m2024-02-06T23:53:13.742+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.security.web.FilterChainProxy       ?[0;39m ?[2m:?[0;39m Secured DELETE /api/task_statuses/12
+?[2m2024-02-06T23:53:13.742+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36ms.w.s.m.m.a.RequestMappingHandlerMapping?[0;39m ?[2m:?[0;39m Mapped to hexlet.code.controller.TaskStatusController#delete(Long)
+Hibernate: select ts1_0.id,ts1_0.created_at,ts1_0.name,ts1_0.slug from task_statuses ts1_0 where ts1_0.id=?
+Hibernate: delete from task_statuses where id=?
+Hibernate: select count(*) from task_statuses ts1_0 where ts1_0.id=?
+Hibernate: select ts1_0.id,ts1_0.created_at,ts1_0.name,ts1_0.slug from task_statuses ts1_0
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.first_name,u1_0.last_name,u1_0.password_origin,u1_0.updated_at from users u1_0
+Hibernate: delete from users where id=?
+Hibernate: insert into task_statuses (created_at,name,slug,id) values (?,?,?,default)
+Hibernate: insert into users (created_at,email,first_name,last_name,password_origin,updated_at,id) values (?,?,?,?,?,?,default)
+?[2m2024-02-06T23:53:13.794+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.security.web.FilterChainProxy       ?[0;39m ?[2m:?[0;39m Securing PUT /api/task_statuses/13
+?[2m2024-02-06T23:53:13.795+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.security.web.FilterChainProxy       ?[0;39m ?[2m:?[0;39m Secured PUT /api/task_statuses/13
+?[2m2024-02-06T23:53:13.795+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36ms.w.s.m.m.a.RequestMappingHandlerMapping?[0;39m ?[2m:?[0;39m Mapped to hexlet.code.controller.TaskStatusController#update(TaskStatusUpdateDTO, Long)
+?[2m2024-02-06T23:53:13.800+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mm.m.a.RequestResponseBodyMethodProcessor?[0;39m ?[2m:?[0;39m Read "application/json;charset=UTF-8" to [hexlet.code.dto.taskStatus.TaskStatusUpdateDTO@29796e71]
+Hibernate: select ts1_0.id,ts1_0.created_at,ts1_0.name,ts1_0.slug from task_statuses ts1_0 where ts1_0.id=?
+Hibernate: update task_statuses set created_at=?,name=?,slug=? where id=?
+?[2m2024-02-06T23:53:13.806+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mm.m.a.RequestResponseBodyMethodProcessor?[0;39m ?[2m:?[0;39m Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+?[2m2024-02-06T23:53:13.806+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mm.m.a.RequestResponseBodyMethodProcessor?[0;39m ?[2m:?[0;39m Writing [hexlet.code.dto.taskStatus.TaskStatusDTO@2ce9f29c]
+Hibernate: select ts1_0.id,ts1_0.created_at,ts1_0.name,ts1_0.slug from task_statuses ts1_0 where ts1_0.id=?
+Hibernate: select ts1_0.id,ts1_0.created_at,ts1_0.name,ts1_0.slug from task_statuses ts1_0
+Hibernate: delete from task_statuses where id=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.first_name,u1_0.last_name,u1_0.password_origin,u1_0.updated_at from users u1_0
+Hibernate: delete from users where id=?
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

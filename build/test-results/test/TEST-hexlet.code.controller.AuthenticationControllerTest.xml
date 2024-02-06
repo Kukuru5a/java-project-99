@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="hexlet.code.controller.AuthenticationControllerTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-02-06T17:53:08" hostname="MacBook-Air-Roma.local" time="2.033">
+  <properties/>
+  <testcase name="testCreateAdmin()" classname="hexlet.code.controller.AuthenticationControllerTest" time="2.033">
+    <failure message="java.lang.AssertionError: Status expected:&lt;200&gt; but was:&lt;401&gt;" type="java.lang.AssertionError">java.lang.AssertionError: Status expected:&lt;200&gt; but was:&lt;401&gt;
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at hexlet.code.controller.AuthenticationControllerTest.testCreateAdmin(AuthenticationControllerTest.java:34)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:119)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:94)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:89)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy2/jdk.proxy2.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <system-out><![CDATA[23:52:50.021 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [hexlet.code.controller.AuthenticationControllerTest]: AuthenticationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+23:52:50.291 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration hexlet.code.AppApplication for test class hexlet.code.controller.AuthenticationControllerTest
+23:52:50.913 [Test worker] INFO org.springframework.boot.devtools.restart.RestartApplicationListener -- Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+?[32m :: Spring Boot :: ?[39m              ?[2m (v3.2.1)?[0;39m
+
+?[2m2024-02-06T23:52:52.747+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.w.c.s.GenericWebApplicationContext  ?[0;39m ?[2m:?[0;39m Refreshing org.springframework.web.context.support.GenericWebApplicationContext@26994c6a
+Hibernate: create table labels (id bigint generated by default as identity, created_at date, name varchar(1000), primary key (id))
+Hibernate: create table task_statuses (id bigint generated by default as identity, created_at date, name varchar(255), slug varchar(255), primary key (id))
+Hibernate: create table tasks (id bigint generated by default as identity, created_at date, description varchar(255), index integer, name varchar(255), assignee_id bigint, status_id bigint, primary key (id))
+Hibernate: create table tasks_labels (task_id bigint not null, labels_id bigint not null, primary key (task_id, labels_id))
+Hibernate: create table users (id bigint generated by default as identity, created_at date, email varchar(255), first_name varchar(255), last_name varchar(255), password_origin varchar(255), updated_at date, primary key (id))
+Hibernate: alter table if exists labels drop constraint if exists UK_otpirygk7h1hmo02w999f7kmp
+Hibernate: alter table if exists labels add constraint UK_otpirygk7h1hmo02w999f7kmp unique (name)
+Hibernate: alter table if exists task_statuses drop constraint if exists UK_dhogqjhrcydo4g6hpr4yue0u
+Hibernate: alter table if exists task_statuses add constraint UK_dhogqjhrcydo4g6hpr4yue0u unique (name)
+Hibernate: alter table if exists task_statuses drop constraint if exists UK_s9havha7265fb7s24h1oe937x
+Hibernate: alter table if exists task_statuses add constraint UK_s9havha7265fb7s24h1oe937x unique (slug)
+Hibernate: alter table if exists tasks drop constraint if exists UK_s90mh6056fm69w0ilwka74vut
+Hibernate: alter table if exists tasks add constraint UK_s90mh6056fm69w0ilwka74vut unique (name)
+Hibernate: alter table if exists users drop constraint if exists UK_6dotkott2kjsp8vw4d0m25fb7
+Hibernate: alter table if exists users add constraint UK_6dotkott2kjsp8vw4d0m25fb7 unique (email)
+Hibernate: alter table if exists tasks add constraint FKekr1dgiqktpyoip3qmp6lxsit foreign key (assignee_id) references users
+Hibernate: alter table if exists tasks add constraint FKa0dcdc9qxbpoes4a1p4i0f9y3 foreign key (status_id) references task_statuses
+Hibernate: alter table if exists tasks_labels add constraint FK1jqo1eikgg8xnhi58yp81b8nl foreign key (labels_id) references labels
+Hibernate: alter table if exists tasks_labels add constraint FK9qrs86gyw7ctgqiwqvr9jkf0l foreign key (task_id) references tasks
+?[2m2024-02-06T23:53:03.470+06:00?[0;39m ?[33m WARN?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mJpaBaseConfiguration$JpaWebConfiguration?[0;39m ?[2m:?[0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+?[2m2024-02-06T23:53:05.414+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36ms.w.s.m.m.a.RequestMappingHandlerMapping?[0;39m ?[2m:?[0;39m 28 mappings in 'requestMappingHandlerMapping'
+?[2m2024-02-06T23:53:05.666+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.w.s.handler.SimpleUrlHandlerMapping ?[0;39m ?[2m:?[0;39m Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+?[2m2024-02-06T23:53:06.654+06:00?[0;39m ?[32m INFO?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.s.web.DefaultSecurityFilterChain    ?[0;39m ?[2m:?[0;39m Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5bba292, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@21749559, org.springframework.security.web.context.SecurityContextHolderFilter@79a743dd, org.springframework.security.web.header.HeaderWriterFilter@47c9febd, org.springframework.web.filter.CorsFilter@73666f9b, org.springframework.security.web.authentication.logout.LogoutFilter@74acb786, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@250c2993, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@157c5e38, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2d2e2b95, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@92f66c2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@44134703, org.springframework.security.web.session.SessionManagementFilter@4ff9fa2b, org.springframework.security.web.access.ExceptionTranslationFilter@32e26a92, org.springframework.security.web.access.intercept.AuthorizationFilter@5d5ad7ef]
+?[2m2024-02-06T23:53:07.178+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36ms.w.s.m.m.a.RequestMappingHandlerAdapter?[0;39m ?[2m:?[0;39m ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+?[2m2024-02-06T23:53:07.238+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36m.m.m.a.ExceptionHandlerExceptionResolver?[0;39m ?[2m:?[0;39m ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+?[2m2024-02-06T23:53:08.503+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.w.f.ServerHttpObservationFilter     ?[0;39m ?[2m:?[0;39m Filter 'webMvcObservationFilter' configured for use
+Welcome to Spring!
+org.springframework.context.annotation.internalConfigurationAnnotationProcessor
+org.springframework.context.annotation.internalAutowiredAnnotationProcessor
+org.springframework.context.annotation.internalCommonAnnotationProcessor
+org.springframework.context.annotation.internalPersistenceAnnotationProcessor
+org.springframework.context.event.internalEventListenerProcessor
+org.springframework.context.event.internalEventListenerFactory
+org.springframework.boot.test.context.ImportsContextCustomizer$ImportsCleanupPostProcessor
+org.springframework.boot.test.mock.mockito.MockitoPostProcessor$SpyPostProcessor
+org.springframework.boot.test.mock.mockito.MockitoPostProcessor
+appApplication
+org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory
+entityGenerator
+dataInitializer
+rsaKeyProperties
+encoderConfig
+jacksonConfig
+securityConfig
+authenticationController
+labelController
+taskController
+taskStatusController
+userController
+welcomeController
+globalExceptionHandler
+jsonNullableMapperImpl
+labelMapperImpl
+referenceMapperImpl
+taskMapperImpl
+taskStatusMapperImpl
+userMapperImpl
+customUserDetailsService
+labelService
+taskService
+taskStatusService
+userService
+taskSpecification
+JWTUtils
+userUtils
+generateUser
+generateTaskStatus
+generateTask
+generateLabel
+encodePassword
+jwtEncoder
+jwtDecoder
+objectMapperBuilder
+org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration
+objectPostProcessor
+org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration
+authenticationManagerBuilder
+enableGlobalAuthenticationAutowiredConfigurer
+initializeUserDetailsBeanManagerConfigurer
+initializeAuthenticationProviderBeanManagerConfigurer
+org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration
+delegatingApplicationListener
+webSecurityExpressionHandler
+privilegeEvaluator
+conversionServicePostProcessor
+org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration
+requestDataValueProcessor
+springSecurityHandlerMappingIntrospectorBeanDefinitionRegistryPostProcessor
+org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration
+org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration.httpSecurity
+org.springframework.security.config.annotation.method.configuration.PrePostMethodSecurityConfiguration
+preFilterAuthorizationMethodInterceptor
+preAuthorizeAuthorizationMethodInterceptor
+postAuthorizeAuthorizationMethodInterceptor
+postFilterAuthorizationMethodInterceptor
+securityFilterChain
+authenticationManager
+daoAuthProvider
+org.springframework.aop.config.internalAutoProxyCreator
+preFilterAuthorizationAdvisor
+preAuthorizeAuthorizationAdvisor
+postFilterAuthorizationAdvisor
+postAuthorizeAuthorizationAdvisor
+commandLineRunner
+org.springframework.boot.autoconfigure.AutoConfigurationPackages
+org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration
+propertySourcesPlaceholderConfigurer
+org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration
+fileWatcher
+sslPropertiesSslBundleRegistrar
+sslBundleRegistry
+org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor
+org.springframework.boot.context.internalConfigurationPropertiesBinder
+org.springframework.boot.context.properties.BoundConfigurationProperties
+org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.methodValidationExcludeFilter
+spring.ssl-org.springframework.boot.autoconfigure.ssl.SslProperties
+org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration$TomcatWebSocketConfiguration
+websocketServletWebServerCustomizer
+org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration
+org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryConfiguration$EmbeddedTomcat
+tomcatServletWebServerFactory
+org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryAutoConfiguration
+servletWebServerFactoryCustomizer
+tomcatServletWebServerFactoryCustomizer
+server-org.springframework.boot.autoconfigure.web.ServerProperties
+webServerFactoryCustomizerBeanPostProcessor
+errorPageRegistrarBeanPostProcessor
+org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration$DispatcherServletConfiguration
+dispatcherServlet
+spring.mvc-org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties
+org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration
+dispatcherServletRegistration
+org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration
+org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$ThreadPoolTaskExecutorBuilderConfiguration
+threadPoolTaskExecutorBuilder
+org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$TaskExecutorBuilderConfiguration
+taskExecutorBuilder
+org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$SimpleAsyncTaskExecutorBuilderConfiguration
+simpleAsyncTaskExecutorBuilder
+org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$TaskExecutorConfiguration
+applicationTaskExecutor
+org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration
+spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties
+org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration
+defaultValidator
+methodValidationPostProcessor
+org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration
+error
+beanNameViewResolver
+org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration
+conventionErrorViewResolver
+spring.web-org.springframework.boot.autoconfigure.web.WebProperties
+org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration
+errorAttributes
+basicErrorController
+errorPageCustomizer
+preserveErrorControllerTargetClassPostProcessor
+org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration
+welcomePageHandlerMapping
+welcomePageNotAcceptableHandlerMapping
+localeResolver
+themeResolver
+flashMapManager
+mvcConversionService
+mvcValidator
+mvcContentNegotiationManager
+requestMappingHandlerMapping
+mvcPatternParser
+mvcUrlPathHelper
+mvcPathMatcher
+viewControllerHandlerMapping
+beanNameHandlerMapping
+routerFunctionMapping
+resourceHandlerMapping
+mvcResourceUrlProvider
+defaultServletHandlerMapping
+requestMappingHandlerAdapter
+handlerFunctionAdapter
+mvcUriComponentsContributor
+httpRequestHandlerAdapter
+simpleControllerHandlerAdapter
+handlerExceptionResolver
+mvcViewResolver
+mvcHandlerMappingIntrospector
+viewNameTranslator
+org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter
+defaultViewResolver
+viewResolver
+requestContextFilter
+org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration
+formContentFilter
+org.springdoc.core.configuration.SpringDocConfiguration$QuerydslProvider
+queryDslQuerydslPredicateOperationCustomizer
+org.springdoc.core.configuration.SpringDocConfiguration$OpenApiResourceAdvice
+org.springdoc.core.configuration.SpringDocConfiguration$SpringDocSpringDataWebPropertiesProvider
+springDataWebPropertiesProvider
+org.springdoc.core.configuration.SpringDocConfiguration$WebConversionServiceConfiguration
+webConversionServiceProvider
+org.springdoc.core.configuration.SpringDocConfiguration
+localSpringDocParameterNameDiscoverer
+additionalModelsConverter
+fileSupportConverter
+responseSupportConverter
+schemaPropertyDeprecatingConverter
+polymorphicModelConverter
+openAPIBuilder
+modelConverterRegistrar
+operationBuilder
+propertyResolverUtils
+requestBodyBuilder
+securityParser
+genericReturnTypeParser
+parameterBuilder
+springDocProviders
+springdocObjectMapperProvider
+springDocCustomizers
+org.springdoc.core.configuration.SpringDocPageableConfiguration
+pageableOpenAPIConverter
+delegatingMethodParameterCustomizer
+org.springdoc.core.configuration.SpringDocSecurityConfiguration$SpringSecurityLoginEndpointConfiguration
+org.springdoc.core.configuration.SpringDocSecurityConfiguration
+org.springdoc.core.configuration.SpringDocSortConfiguration
+sortOpenAPIConverter
+org.springdoc.core.configuration.SpringDocUIConfiguration
+org.springdoc.core.properties.SpringDocConfigProperties
+org.springdoc.core.properties.SwaggerUiConfigParameters
+org.springdoc.core.properties.SwaggerUiConfigProperties
+org.springdoc.core.properties.SwaggerUiOAuthProperties
+org.springdoc.webmvc.core.configuration.SpringDocWebMvcConfiguration$SpringDocWebMvcActuatorConfiguration
+org.springdoc.webmvc.core.configuration.SpringDocWebMvcConfiguration$SpringDocWebMvcRouterConfiguration
+routerFunctionProvider
+org.springdoc.webmvc.core.configuration.SpringDocWebMvcConfiguration
+openApiResource
+requestBuilder
+springWebProvider
+responseBuilder
+org.springdoc.webmvc.ui.SwaggerConfig
+swaggerWelcome
+swaggerConfigResource
+indexPageTransformer
+swaggerWebMvcConfigurer
+swaggerResourceResolver
+org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration
+applicationAvailability
+org.springframework.boot.actuate.autoconfigure.availability.AvailabilityHealthContributorAutoConfiguration
+org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration
+standardJacksonObjectMapperBuilderCustomizer
+spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties
+org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration
+org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration
+parameterNamesModule
+org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration
+jacksonObjectMapper
+org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonMixinConfiguration
+jsonMixinModuleEntries
+jsonMixinModule
+org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration
+jsonComponentModule
+org.springframework.boot.autoconfigure.transaction.jta.JtaAutoConfiguration
+org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari
+jdbcConnectionDetailsHikariBeanPostProcessor
+dataSource
+org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$PooledDataSourceConfiguration
+jdbcConnectionDetails
+org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration$HikariPoolDataSourceMetadataProviderConfiguration
+hikariPoolDataSourceMetadataProvider
+org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration
+org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties
+org.springframework.boot.autoconfigure.transaction.TransactionManagerCustomizationAutoConfiguration
+platformTransactionManagerCustomizers
+transactionExecutionListeners
+spring.transaction-org.springframework.boot.autoconfigure.transaction.TransactionProperties
+org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration
+openEntityManagerInViewInterceptor
+openEntityManagerInViewInterceptorConfigurer
+org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$PersistenceManagedTypesConfiguration
+persistenceManagedTypes
+org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration
+transactionManager
+jpaVendorAdapter
+entityManagerFactoryBuilder
+entityManagerFactory
+spring.jpa.hibernate-org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties
+spring.jpa-org.springframework.boot.autoconfigure.orm.jpa.JpaProperties
+org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.web.servlet.ServletManagementContextAutoConfiguration
+servletWebChildContextFactory
+managementServletContext
+org.springframework.boot.actuate.autoconfigure.health.HealthEndpointConfiguration
+healthStatusAggregator
+healthHttpCodeStatusMapper
+healthEndpointGroups
+healthContributorRegistry
+healthEndpointGroupMembershipValidator
+healthEndpoint
+healthEndpointGroupsBeanPostProcessor
+org.springframework.boot.actuate.autoconfigure.health.HealthEndpointWebExtensionConfiguration$MvcAdditionalHealthEndpointPathsConfiguration
+healthEndpointWebMvcHandlerMapping
+org.springframework.boot.actuate.autoconfigure.health.HealthEndpointWebExtensionConfiguration
+healthEndpointWebExtension
+org.springframework.boot.actuate.autoconfigure.health.HealthEndpointAutoConfiguration
+management.endpoint.health-org.springframework.boot.actuate.autoconfigure.health.HealthEndpointProperties
+org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration
+spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties
+org.springframework.boot.actuate.autoconfigure.info.InfoContributorAutoConfiguration
+management.info-org.springframework.boot.actuate.autoconfigure.info.InfoContributorProperties
+org.springframework.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration
+endpointOperationParameterMapper
+endpointCachingOperationInvokerAdvisor
+org.springframework.boot.actuate.autoconfigure.endpoint.jackson.JacksonEndpointAutoConfiguration
+endpointObjectMapper
+org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration$WebEndpointServletConfiguration
+servletEndpointDiscoverer
+org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration
+webEndpointPathMapper
+endpointMediaTypes
+webEndpointDiscoverer
+controllerEndpointDiscoverer
+pathMappedEndpoints
+webExposeExcludePropertyEndpointFilter
+controllerExposeExcludePropertyEndpointFilter
+management.endpoints.web-org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties
+org.springframework.boot.actuate.autoconfigure.system.DiskSpaceHealthContributorAutoConfiguration
+diskSpaceHealthIndicator
+management.health.diskspace-org.springframework.boot.actuate.autoconfigure.system.DiskSpaceHealthIndicatorProperties
+org.springframework.boot.actuate.autoconfigure.health.HealthContributorAutoConfiguration
+pingHealthContributor
+org.springframework.boot.actuate.autoconfigure.jdbc.DataSourceHealthContributorAutoConfiguration
+dbHealthContributor
+management.health.db-org.springframework.boot.actuate.autoconfigure.jdbc.DataSourceHealthIndicatorProperties
+org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration
+micrometerClock
+meterRegistryPostProcessor
+propertiesMeterFilter
+meterRegistryCloser
+management.metrics-org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties
+org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleMetricsExportAutoConfiguration
+simpleMeterRegistry
+simpleConfig
+management.simple.metrics.export-org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleProperties
+org.springframework.boot.actuate.autoconfigure.metrics.CompositeMeterRegistryAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.metrics.JvmMetricsAutoConfiguration
+jvmGcMetrics
+jvmHeapPressureMetrics
+jvmMemoryMetrics
+jvmThreadMetrics
+classLoaderMetrics
+jvmInfoMetrics
+jvmCompilationMetrics
+org.springframework.boot.actuate.autoconfigure.metrics.LogbackMetricsAutoConfiguration
+logbackMetrics
+org.springframework.boot.actuate.autoconfigure.metrics.MetricsAspectsAutoConfiguration
+countedAspect
+timedAspect
+org.springframework.boot.actuate.autoconfigure.metrics.SystemMetricsAutoConfiguration
+uptimeMetrics
+processorMetrics
+fileDescriptorMetrics
+diskSpaceMetrics
+org.springframework.boot.actuate.autoconfigure.metrics.data.RepositoryMetricsAutoConfiguration
+repositoryTagsProvider
+metricsRepositoryMethodInvocationListener
+metricsRepositoryMethodInvocationListenerBeanPostProcessor
+org.springframework.boot.actuate.autoconfigure.metrics.integration.IntegrationMetricsAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.metrics.jdbc.DataSourcePoolMetricsAutoConfiguration$HikariDataSourceMetricsConfiguration
+hikariDataSourceMeterBinder
+org.springframework.boot.actuate.autoconfigure.metrics.jdbc.DataSourcePoolMetricsAutoConfiguration$DataSourcePoolMetadataMetricsConfiguration
+dataSourcePoolMetadataMeterBinder
+org.springframework.boot.actuate.autoconfigure.metrics.jdbc.DataSourcePoolMetricsAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.metrics.startup.StartupTimeMetricsListenerAutoConfiguration
+startupTimeMetrics
+org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$ThreadPoolTaskSchedulerBuilderConfiguration
+threadPoolTaskSchedulerBuilder
+org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$TaskSchedulerBuilderConfiguration
+taskSchedulerBuilder
+org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$SimpleAsyncTaskSchedulerBuilderConfiguration
+simpleAsyncTaskSchedulerBuilder
+org.springframework.boot.autoconfigure.task.TaskSchedulingAutoConfiguration
+spring.task.scheduling-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties
+org.springframework.boot.actuate.autoconfigure.metrics.task.TaskExecutorMetricsAutoConfiguration
+eagerTaskExecutorMetrics
+org.springframework.boot.actuate.autoconfigure.metrics.web.tomcat.TomcatMetricsAutoConfiguration
+tomcatMetricsBinder
+org.springframework.boot.actuate.autoconfigure.observation.ObservationAutoConfiguration$ObservedAspectConfiguration
+observedAspect
+org.springframework.boot.actuate.autoconfigure.observation.ObservationAutoConfiguration$MeterObservationHandlerConfiguration$OnlyMetricsMeterObservationHandlerConfiguration
+defaultMeterObservationHandler
+org.springframework.boot.actuate.autoconfigure.observation.ObservationAutoConfiguration$MeterObservationHandlerConfiguration
+org.springframework.boot.actuate.autoconfigure.observation.ObservationAutoConfiguration$OnlyMetricsConfiguration
+metricsObservationHandlerGrouping
+org.springframework.boot.actuate.autoconfigure.observation.ObservationAutoConfiguration
+observationRegistryPostProcessor
+observationRegistry
+propertiesObservationFilter
+management.observations-org.springframework.boot.actuate.autoconfigure.observation.ObservationProperties
+org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration
+stringHttpMessageConverter
+org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration
+mappingJackson2HttpMessageConverter
+org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration
+org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration
+messageConverters
+org.springframework.boot.autoconfigure.web.client.RestTemplateAutoConfiguration
+restTemplateBuilderConfigurer
+restTemplateBuilder
+org.springframework.boot.autoconfigure.web.client.RestClientAutoConfiguration
+httpMessageConvertersRestClientCustomizer
+restClientSsl
+restClientBuilderConfigurer
+restClientBuilder
+org.springframework.boot.actuate.autoconfigure.observation.web.client.HttpClientObservationsAutoConfiguration$MeterFilterConfiguration
+metricsHttpClientUriTagFilter
+org.springframework.boot.actuate.autoconfigure.observation.web.client.RestTemplateObservationConfiguration
+observationRestTemplateCustomizer
+org.springframework.boot.actuate.autoconfigure.observation.web.client.RestClientObservationConfiguration
+observationRestClientCustomizer
+org.springframework.boot.actuate.autoconfigure.observation.web.client.HttpClientObservationsAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.observation.web.servlet.WebMvcObservationAutoConfiguration$MeterFilterConfiguration
+metricsHttpServerUriTagFilter
+org.springframework.boot.actuate.autoconfigure.observation.web.servlet.WebMvcObservationAutoConfiguration
+webMvcObservationFilter
+org.springframework.boot.actuate.autoconfigure.scheduling.ScheduledTasksObservabilityAutoConfiguration
+observabilitySchedulingConfigurer
+org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.Oauth2ResourceServerConfiguration$JwtConfiguration
+org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerOpaqueTokenConfiguration$OpaqueTokenIntrospectionClientConfiguration
+org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.Oauth2ResourceServerConfiguration$OpaqueTokenConfiguration
+org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration
+spring.security.oauth2.resourceserver-org.springframework.boot.autoconfigure.security.oauth2.resource.OAuth2ResourceServerProperties
+org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$AspectJAutoProxyingConfiguration$CglibAutoProxyConfiguration
+org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$AspectJAutoProxyingConfiguration
+org.springframework.boot.autoconfigure.aop.AopAutoConfiguration
+org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration
+org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration
+lifecycleProcessor
+spring.lifecycle-org.springframework.boot.autoconfigure.context.LifecycleProperties
+org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration
+persistenceExceptionTranslationPostProcessor
+org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration
+jpaSharedEM_entityManagerFactory
+emBeanDefinitionRegistrarPostProcessor
+jpaMappingContext
+jpaContext
+org.springframework.data.jpa.util.JpaMetamodelCacheCleanup
+org.springframework.data.jpa.repository.support.JpaEvaluationContextExtension
+jpa.named-queries#0
+jpa.LabelRepository.fragments#0
+labelRepository
+jpa.named-queries#1
+jpa.TaskStatusRepository.fragments#0
+taskStatusRepository
+jpa.named-queries#2
+jpa.TaskRepository.fragments#0
+taskRepository
+jpa.named-queries#3
+jpa.UserRepository.fragments#0
+userRepository
+data-jpa.repository-aot-processor#0
+org.springframework.data.web.config.ProjectingArgumentResolverRegistrar
+projectingArgumentResolverBeanPostProcessor
+org.springframework.data.web.config.SpringDataWebConfiguration
+pageableResolver
+sortResolver
+offsetResolver
+org.springframework.data.web.config.SpringDataJacksonConfiguration
+jacksonGeoModule
+org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration
+pageableCustomizer
+sortCustomizer
+spring.data.web-org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties
+org.springframework.boot.autoconfigure.jdbc.JdbcTemplateConfiguration
+jdbcTemplate
+org.springframework.boot.autoconfigure.jdbc.NamedParameterJdbcTemplateConfiguration
+namedParameterJdbcTemplate
+org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration
+spring.jdbc-org.springframework.boot.autoconfigure.jdbc.JdbcProperties
+org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer$DependsOnDatabaseInitializationPostProcessor
+org.springframework.boot.autoconfigure.jdbc.JdbcClientAutoConfiguration
+jdbcClient
+org.springframework.boot.autoconfigure.security.servlet.SpringBootWebSecurityConfiguration
+org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+authenticationEventPublisher
+spring.security-org.springframework.boot.autoconfigure.security.SecurityProperties
+org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration
+securityFilterChainRegistration
+org.springframework.boot.autoconfigure.sql.init.DataSourceInitializationConfiguration
+dataSourceScriptDatabaseInitializer
+org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration
+spring.sql.init-org.springframework.boot.autoconfigure.sql.init.SqlInitializationProperties
+org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration
+org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration
+org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration
+org.springframework.transaction.config.internalTransactionAdvisor
+transactionAttributeSource
+transactionInterceptor
+org.springframework.transaction.config.internalTransactionalEventListenerFactory
+org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$EnableTransactionManagementConfiguration$CglibAutoProxyConfiguration
+org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$EnableTransactionManagementConfiguration
+org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$TransactionTemplateConfiguration
+transactionTemplate
+org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration
+org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration
+characterEncodingFilter
+localeCharsetMappingsCustomizer
+org.springframework.boot.autoconfigure.web.servlet.MultipartAutoConfiguration
+multipartConfigElement
+multipartResolver
+spring.servlet.multipart-org.springframework.boot.autoconfigure.web.servlet.MultipartProperties
+org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration
+mockMvcBuilder
+springBootMockMvcBuilderCustomizer
+mockMvc
+org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration
+securityMockMvcBuilderCustomizer
+org.springframework.boot.actuate.autoconfigure.endpoint.web.ServletEndpointManagementContextConfiguration$WebMvcServletEndpointManagementContextConfiguration
+servletEndpointRegistrar
+org.springframework.boot.actuate.autoconfigure.endpoint.web.ServletEndpointManagementContextConfiguration
+servletExposeExcludePropertyEndpointFilter
+org.springframework.boot.actuate.autoconfigure.endpoint.web.servlet.WebMvcEndpointManagementContextConfiguration
+webEndpointServletHandlerMapping
+controllerEndpointHandlerMapping
+endpointObjectMapperWebMvcConfigurer
+management.endpoints.web.cors-org.springframework.boot.actuate.autoconfigure.endpoint.web.CorsEndpointProperties
+org.springframework.boot.actuate.autoconfigure.security.servlet.SecurityRequestMatchersManagementContextConfiguration$MvcRequestMatcherConfiguration
+requestMatcherProvider
+org.springframework.boot.actuate.autoconfigure.security.servlet.SecurityRequestMatchersManagementContextConfiguration
+org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$SameManagementContextConfiguration$EnableSameManagementContextConfiguration
+org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$SameManagementContextConfiguration
+org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration
+management.server-org.springframework.boot.actuate.autoconfigure.web.server.ManagementServerProperties
+mvcHandlerMappingIntrospectorRequestTransformer
+springSecurityFilterChain
+jpaSharedEM_AWC_entityManagerFactory
+?[2m2024-02-06T23:53:09.907+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.security.web.FilterChainProxy       ?[0;39m ?[2m:?[0;39m Securing POST /api/login
+?[2m2024-02-06T23:53:09.931+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.s.w.a.AnonymousAuthenticationFilter ?[0;39m ?[2m:?[0;39m Set SecurityContextHolder to anonymous SecurityContext
+?[2m2024-02-06T23:53:09.943+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.security.web.FilterChainProxy       ?[0;39m ?[2m:?[0;39m Secured POST /api/login
+?[2m2024-02-06T23:53:09.948+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36ms.w.s.m.m.a.RequestMappingHandlerMapping?[0;39m ?[2m:?[0;39m Mapped to hexlet.code.controller.AuthenticationController#create(AuthRequest)
+?[2m2024-02-06T23:53:10.038+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mm.m.a.RequestResponseBodyMethodProcessor?[0;39m ?[2m:?[0;39m Read "application/json;charset=UTF-8" to [hexlet.code.dto.AuthRequest@282c8e3d]
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.first_name,u1_0.last_name,u1_0.password_origin,u1_0.updated_at from users u1_0 where u1_0.email=?
+?[2m2024-02-06T23:53:10.776+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.s.a.dao.DaoAuthenticationProvider   ?[0;39m ?[2m:?[0;39m Failed to find user 'hexlet@example.com'
+?[2m2024-02-06T23:53:10.810+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36ms.w.a.DelegatingAuthenticationEntryPoint?[0;39m ?[2m:?[0;39m Trying to match using Or [org.springframework.security.config.annotation.web.configurers.oauth2.server.resource.OAuth2ResourceServerConfigurer$BearerTokenRequestMatcher@6bf9964a, RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest], And [Not [MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@76917a4e, matchingMediaTypes=[text/html], useEquals=false, ignoredMediaTypes=[]]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@76917a4e, matchingMediaTypes=[application/atom+xml, application/x-www-form-urlencoded, application/json, application/octet-stream, application/xml, multipart/form-data, text/xml], useEquals=false, ignoredMediaTypes=[*/*]]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@76917a4e, matchingMediaTypes=[*/*], useEquals=true, ignoredMediaTypes=[]]]
+?[2m2024-02-06T23:53:10.811+06:00?[0;39m ?[32mDEBUG?[0;39m ?[35m94428?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36ms.w.a.DelegatingAuthenticationEntryPoint?[0;39m ?[2m:?[0;39m Match found! Executing org.springframework.security.oauth2.server.resource.web.BearerTokenAuthenticationEntryPoint@2876fe7d
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/login
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"53"]
+             Body = {"password":"qwerty","username":"hexlet@example.com"}
+    Session Attrs = {}
+
+Handler:
+             Type = hexlet.code.controller.AuthenticationController
+           Method = hexlet.code.controller.AuthenticationController#create(AuthRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 401
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", WWW-Authenticate:"Bearer", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0"]
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
