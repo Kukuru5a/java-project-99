@@ -78,8 +78,8 @@ public class UserControllerTest {
     }
     @Test
     public void testShow() throws Exception {
-        var request = MockMvcRequestBuilders.get("/api/users" +
-                testUser.getId()).with(token);
+        var request = MockMvcRequestBuilders.get("/api/users"
+                + testUser.getId()).with(token);
         var res = mockMvc.perform(request)
                 .andExpect(status().isOk())
                 .andReturn();
@@ -118,8 +118,8 @@ public class UserControllerTest {
         var data = new UserUpdateDTO();
         data.setEmail(JsonNullable.of("anyMail@mail.ru"));
         data.setPassword(JsonNullable.of("myNewPassword"));
-        var request = put("/api/users/" +
-                testUser.getId()).with(token)
+        var request = put("/api/users/"
+                + testUser.getId()).with(token)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(om.writeValueAsString(data));
         var res = mockMvc.perform(request).andExpect(status().isOk());

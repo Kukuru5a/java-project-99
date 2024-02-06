@@ -13,7 +13,7 @@ public class UserUtils {
 
     private User getCurrentUser() {
         var authintication = SecurityContextHolder.getContext().getAuthentication();
-        if(authintication == null || !authintication.isAuthenticated()) {
+        if (authintication == null || !authintication.isAuthenticated()) {
             return null;
         }
         var email = authintication.getName();

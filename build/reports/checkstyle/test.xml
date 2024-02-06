@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="9.3">
+<file name="/Users/romazagorulya/Hexlet/java-project-99/src/test/java/util/EntityGenerator.java">
+</file>
+<file name="/Users/romazagorulya/Hexlet/java-project-99/src/test/java/controller/UserControllerTest.java">
+</file>
+<file name="/Users/romazagorulya/Hexlet/java-project-99/src/test/java/controller/TaskStatusControllerTest.java">
+</file>
+<file name="/Users/romazagorulya/Hexlet/java-project-99/src/test/java/controller/AuthenticationControllerTest.java">
+</file>
+<file name="/Users/romazagorulya/Hexlet/java-project-99/src/test/java/AppApplicationTest.java">
+</file>
+</checkstyle>
