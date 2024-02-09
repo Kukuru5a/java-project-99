@@ -7,7 +7,7 @@ clean:
 	./gradlew clean
 
 build:
-	./gradlew build
+	./gradlew clean build
 
 install:
 	./gradlew installDist
