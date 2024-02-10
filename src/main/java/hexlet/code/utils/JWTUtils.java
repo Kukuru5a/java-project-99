@@ -11,19 +11,19 @@ import java.time.temporal.ChronoUnit;
 
 @Component
 public class JWTUtils {
+
     @Autowired
     private JwtEncoder encoder;
 
-    public String generateToken(String userName) {
+    public String generateToken(String username) {
         Instant now = Instant.now();
-
-        JwtClaimsSet claimsSet = JwtClaimsSet.builder()
+        JwtClaimsSet claims = JwtClaimsSet.builder()
                 .issuer("self")
                 .issuedAt(now)
                 .expiresAt(now.plus(1, ChronoUnit.HOURS))
-                .subject(userName)
+                .subject(username)
                 .build();
-        return this.encoder.encode(JwtEncoderParameters.from(claimsSet)).getTokenValue();
+        return this.encoder.encode(JwtEncoderParameters.from(claims)).getTokenValue();
     }
 
 }
