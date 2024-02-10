@@ -57,7 +57,7 @@ public class DataInitializer implements ApplicationRunner {
             }
         }
     }
-//
+
     public static User generateAdmin() {
         var userData = new User();
         userData.setEmail("hexlet@example.com");

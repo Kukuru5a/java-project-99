@@ -6,8 +6,9 @@ plugins {
     id("org.springframework.boot") version "3.2.1"
     id("io.spring.dependency-management") version "1.1.4"
     id("io.freefair.lombok") version "8.3"
-
+    id ("io.sentry.jvm.gradle") version "4.3.0"
 }
+
 
 group = "hexlet.code"
 version = "0.0.1-SNAPSHOT"
@@ -21,6 +22,7 @@ application{
 repositories {
     mavenCentral()
 }
+
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
@@ -60,7 +62,16 @@ dependencies {
 
     implementation("com.zaxxer:HikariCP:5.0.1")
 }
+sentry {
+    val env = System.getenv("APP_ENV")
+    if (env != null && env.contentEquals("prod")) {
+        includeSourceContext = true
+        org = "romaroma"
+        projectName = "java-spring-boot"
+        authToken = System.getenv("SENTRY_AUTH_TOKEN")
+    }
 
 tasks.withType<Test> {
     useJUnitPlatform()
+}
 }
