@@ -34,7 +34,7 @@ public class LabelService {
 
     public LabelDTO update(LabelUpdateDTO dto, Long id) {
         var label = repository.findById(id).orElseThrow();
-        mapper.map(label);
+        mapper.update(dto, label);
         repository.save(label);
         return mapper.map(label);
     }

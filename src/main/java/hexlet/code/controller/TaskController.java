@@ -46,7 +46,7 @@ public class TaskController {
         return service.findById(id);
     }
 
-    @PostMapping("/{id}")
+    @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     TaskDTO create(@Valid @RequestBody TaskCreateDTO dto) {
         return service.create(dto);

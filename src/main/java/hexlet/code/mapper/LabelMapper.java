@@ -21,7 +21,7 @@ import java.util.List;
 public abstract class LabelMapper {
     public abstract Label map(LabelCreateDTO dto);
 
-    public abstract void map(LabelUpdateDTO dto, @MappingTarget Label model);
+    public abstract void update(LabelUpdateDTO dto, @MappingTarget Label model);
 
     public abstract LabelDTO map(Label model);
 
