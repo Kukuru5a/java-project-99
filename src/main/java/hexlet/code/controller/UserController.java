@@ -6,10 +6,12 @@ import hexlet.code.dto.user.UserUpdateDTO;
 import hexlet.code.mapper.UserMapper;
 import hexlet.code.repositories.UserRepository;
 import hexlet.code.services.UserService;
+import hexlet.code.utils.UserUtils;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,14 +28,10 @@ import java.util.List;
 @RequestMapping("/api/users")
 public class UserController {
     @Autowired
-    private UserRepository userRepository;
-
+    private UserUtils userUtils;
     @Autowired
     private UserService service;
-    @Autowired
-    private UserMapper userMapper;
-
-    @GetMapping("")
+    @GetMapping
     @ResponseStatus(HttpStatus.OK)
     ResponseEntity<List<UserDTO>> getAll() {
         var res = service.getAll();
@@ -56,13 +54,23 @@ public class UserController {
 
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    UserDTO update(@RequestBody UserUpdateDTO dto, @PathVariable Long id) {
-        return service.update(dto, id);
+    UserDTO update(@RequestBody UserUpdateDTO userData, @PathVariable Long id) {
+        var currentUser = userUtils.getCurrentUser();
+        if (currentUser.getId() == id) {
+            return service.update(userData, id);
+        } else {
+            throw new AccessDeniedException("Access denied");
+        }
     }
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     void delete(@PathVariable Long id) {
-        service.delete(id);
+        var currentUser = userUtils.getCurrentUser();
+        if (currentUser.getId() == id) {
+            service.delete(id);
+        } else {
+            throw new AccessDeniedException("Access denied");
+        }
     }
 }

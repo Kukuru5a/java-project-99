@@ -23,6 +23,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import hexlet.code.util.EntityGenerator;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -68,7 +70,7 @@ public class UserControllerTest {
 
     @Test
     public void testGetList() throws Exception {
-        var request = MockMvcRequestBuilders.get("/api/users")
+        var request = get("/api/users")
                 .with(token);
         var res = mockMvc.perform(request)
                 .andExpect(status().isOk())
@@ -78,8 +80,7 @@ public class UserControllerTest {
     }
     @Test
     public void testShow() throws Exception {
-        var request = MockMvcRequestBuilders.get("/api/users"
-                + testUser.getId()).with(token);
+        var request = get("/api/users/" + testUser.getId()).with(token);
         var res = mockMvc.perform(request)
                 .andExpect(status().isOk())
                 .andReturn();
@@ -102,7 +103,7 @@ public class UserControllerTest {
         data.setLastName(newUser.getLastName());
         data.setPassword(newUser.getPassword());
 
-        var reauest = MockMvcRequestBuilders.post("/api/users")
+        var reauest = post("/api/users")
                 .with(token)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(om.writeValueAsString(data));
