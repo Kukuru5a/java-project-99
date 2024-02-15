@@ -3,8 +3,6 @@ package hexlet.code.controller;
 import hexlet.code.dto.user.UserCreateDTO;
 import hexlet.code.dto.user.UserDTO;
 import hexlet.code.dto.user.UserUpdateDTO;
-import hexlet.code.mapper.UserMapper;
-import hexlet.code.repositories.UserRepository;
 import hexlet.code.services.UserService;
 import hexlet.code.utils.UserUtils;
 import jakarta.validation.Valid;
