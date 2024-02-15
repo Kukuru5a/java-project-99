@@ -5,3 +5,11 @@
 <a href="https://codeclimate.com/github/Kukuru5a/java-project-99/maintainability"><img src="https://api.codeclimate.com/v1/badges/42df4ee4d0ae4dc2f636/maintainability" /></a>
 
 <a href="https://codeclimate.com/github/Kukuru5a/java-project-99/test_coverage"><img src="https://api.codeclimate.com/v1/badges/42df4ee4d0ae4dc2f636/test_coverage" /></a>
+
+### Description
+A project management tool through which a user can take the task or the admin can assign it to user. User friendly interface allows you to find all necessary information such as: user, task, task status, label
+It can be easily sorted using the filter. The task can be created and assigned to user by admin.
+
+### Setup 
+
+```git clone``` to save it locally. ```make build``` to set it up. ```make run``` to start it up. the working route is on http://localhost:8080
