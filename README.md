@@ -13,3 +13,15 @@ It can be easily sorted using the filter. The task can be created and assigned t
 ### Setup 
 
 ```git clone``` to save it locally. ```make build``` to set it up. ```make run``` to start it up. the working route is on http://localhost:8080
+
+#### [Deployed app](https://spring-boot-web-service.onrender.com)
+
+### Guide
+* Sign up the service as admin, using \
+login: hexlet@example.com \
+password: qwerty \
+
+![img.png](img.png)
+
+* Dashboard provides the user with a nav bar through which there is a possibility to create Task, User, Label, Task status.
+![img_1.png](img_1.png)

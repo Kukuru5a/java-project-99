@@ -62,6 +62,11 @@ dependencies {
 
     implementation("com.zaxxer:HikariCP:5.0.1")
 }
+
+tasks.withType<Test> {
+    useJUnitPlatform()
+}
+
 sentry {
     val env = System.getenv("APP_ENV")
     if (env != null && env.contentEquals("prod")) {
@@ -71,9 +76,6 @@ sentry {
         authToken = System.getenv("SENTRY_AUTH_TOKEN")
     }
 
-}
-tasks.withType<Test> {
-    useJUnitPlatform()
 }
 
 tasks.jacocoTestReport {
