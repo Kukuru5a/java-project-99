@@ -49,7 +49,7 @@ public class Task implements BaseEntity {
 
     @ToString.Include
     @ManyToOne(fetch = FetchType.EAGER)
-    private TaskStatus status;
+    private TaskStatus taskStatus;
 
     @ToString.Include
     @ManyToOne(fetch = FetchType.EAGER)
