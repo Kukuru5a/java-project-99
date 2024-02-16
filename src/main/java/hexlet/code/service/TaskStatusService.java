@@ -1,10 +1,10 @@
-package hexlet.code.services;
+package hexlet.code.service;
 
 import hexlet.code.dto.taskStatus.TaskStatusCreateDTO;
 import hexlet.code.dto.taskStatus.TaskStatusDTO;
 import hexlet.code.dto.taskStatus.TaskStatusUpdateDTO;
 import hexlet.code.mapper.TaskStatusMapper;
-import hexlet.code.repositories.TaskStatusRepository;
+import hexlet.code.repository.TaskStatusRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,7 @@
-package hexlet.code.utils;
+package hexlet.code.util;
 
 import hexlet.code.model.User;
-import hexlet.code.repositories.UserRepository;
+import hexlet.code.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

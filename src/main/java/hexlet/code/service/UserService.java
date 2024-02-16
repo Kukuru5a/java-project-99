@@ -1,10 +1,10 @@
-package hexlet.code.services;
+package hexlet.code.service;
 
 import hexlet.code.dto.user.UserCreateDTO;
 import hexlet.code.dto.user.UserDTO;
 import hexlet.code.dto.user.UserUpdateDTO;
 import hexlet.code.mapper.UserMapper;
-import hexlet.code.repositories.UserRepository;
+import hexlet.code.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

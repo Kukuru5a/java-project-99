@@ -1,4 +1,4 @@
-package hexlet.code.repositories;
+package hexlet.code.repository;
 
 import hexlet.code.model.Task;
 import org.springframework.data.jpa.repository.JpaRepository;

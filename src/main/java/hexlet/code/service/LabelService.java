@@ -1,10 +1,10 @@
-package hexlet.code.services;
+package hexlet.code.service;
 
 import hexlet.code.dto.label.LabelCreateDTO;
 import hexlet.code.dto.label.LabelDTO;
 import hexlet.code.dto.label.LabelUpdateDTO;
 import hexlet.code.mapper.LabelMapper;
-import hexlet.code.repositories.LabelRepository;
+import hexlet.code.repository.LabelRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
