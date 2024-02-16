@@ -71,7 +71,13 @@ sentry {
         authToken = System.getenv("SENTRY_AUTH_TOKEN")
     }
 
+}
 tasks.withType<Test> {
     useJUnitPlatform()
 }
+
+tasks.jacocoTestReport {
+    reports {
+        xml.required = true
+    }
 }
