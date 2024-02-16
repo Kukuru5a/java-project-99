@@ -79,7 +79,7 @@ public class TaskControllerTest {
         labelRepository.save(testLabel);
         testTask = entityGenerator.generateTask();
         testTask.setAssignee(testUser);
-        testTask.setStatus(testTaskStatus);
+        testTask.setTaskStatus(testTaskStatus);
         testTask.setLabels(Set.of(testLabel));
         taskRepository.save(testTask);
         token = jwt().jwt(builder -> builder.subject(testUser.getEmail()));
@@ -166,7 +166,7 @@ public class TaskControllerTest {
         assertNotNull(task);
         assertThat(task.getIndex()).isEqualTo(newTask.getIndex());
         assertThat(task.getDescription()).isEqualTo(newTask.getDescription());
-        assertThat(task.getStatus()).isEqualTo(newTaskStatus);
+        assertThat(task.getTaskStatus()).isEqualTo(newTaskStatus);
         assertThat(task.getAssignee()).isEqualTo(newUser);
         assertThat(task.getLabels()).isEqualTo(Set.of(newLabel));
     }
