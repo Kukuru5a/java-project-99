@@ -22,7 +22,7 @@ import static jakarta.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Data
-@Table(name = "tasks")
+@Table(name = "users")
 @EntityListeners(AuditingEntityListener.class)
 public class Task implements BaseEntity {
     @Id

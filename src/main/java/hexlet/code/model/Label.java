@@ -18,7 +18,7 @@ import static jakarta.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Data
-@Table(name = "labels")
+@Table(name = "users")
 @EntityListeners(AuditingEntityListener.class)
 public class Label implements BaseEntity {
     @Id

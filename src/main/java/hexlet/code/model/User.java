@@ -8,7 +8,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.ToString;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -26,23 +25,18 @@ import static jakarta.persistence.GenerationType.IDENTITY;
 @Data
 @Table(name = "users")
 @EntityListeners(AuditingEntityListener.class)
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class User implements UserDetails, BaseEntity {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
-    @ToString.Include
     private long id;
 
-    @ToString.Include
     private String firstName;
 
-    @ToString.Include
     private String lastName;
 
     @NotBlank
     @Column(unique = true)
-    @ToString.Include
     private String email;
 
     @NotBlank
