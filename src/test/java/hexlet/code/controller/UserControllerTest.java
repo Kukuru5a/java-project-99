@@ -88,9 +88,6 @@ public class UserControllerTest {
                 a -> a.node("email").isEqualTo(testUser.getEmail()),
                 a -> a.node("firstName").isEqualTo(testUser.getFirstName()),
                 a -> a.node("lastName").isEqualTo(testUser.getLastName()));
-//                a -> a.node("createdAt").isEqualTo(testUser.getCreatedAt()
-//                        .format(DateTimeFormatter.ofPattern("yyyy-MM-dd")))
-//        );
     }
     @Test
     public void testCreate() throws Exception {
@@ -101,11 +98,11 @@ public class UserControllerTest {
         data.setLastName(newUser.getLastName());
         data.setPassword(newUser.getPassword());
 
-        var reauest = post("/api/users")
+        var request = post("/api/users")
                 .with(token)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(om.writeValueAsString(data));
-        mockMvc.perform(reauest).andExpect(status().isCreated());
+        mockMvc.perform(request).andExpect(status().isCreated());
         var user = userRepository.findByEmail(newUser.getEmail()).get();
         assertNotNull(user);
         assertThat(user.getFirstName()).isEqualTo(newUser.getFirstName());
