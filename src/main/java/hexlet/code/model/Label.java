@@ -7,8 +7,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Column;
 import jakarta.validation.constraints.Size;
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
@@ -18,17 +17,15 @@ import static jakarta.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Data
-@Table(name = "users")
+@Table(name = "labels")
 @EntityListeners(AuditingEntityListener.class)
 public class Label implements BaseEntity {
     @Id
     @GeneratedValue(strategy = IDENTITY)
-    @ToString.Include
     private Long id;
 
     @Size(min = 3, max = 1000)
     @Column(unique = true)
-    @ToString.Include
     private String name;
 
     @CreatedDate

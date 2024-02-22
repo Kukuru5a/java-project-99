@@ -10,8 +10,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.FetchType;
 import jakarta.validation.constraints.Size;
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
@@ -22,30 +21,24 @@ import static jakarta.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Data
-@Table(name = "users")
+@Table(name = "tasks")
 @EntityListeners(AuditingEntityListener.class)
 public class Task implements BaseEntity {
     @Id
     @GeneratedValue(strategy = IDENTITY)
-    @ToString.Include
     private Long id;
 
     @Size(min = 1)
     @Column(unique = true)
-    @ToString.Include
     private String name;
 
-    @ToString.Include
     private Integer index;
 
-    @ToString.Include
     private String description;
 
-    @ToString.Include
     @ManyToOne(fetch = FetchType.EAGER)
     private TaskStatus taskStatus;
 
-    @ToString.Include
     @ManyToOne(fetch = FetchType.EAGER)
     private User assignee;
 
