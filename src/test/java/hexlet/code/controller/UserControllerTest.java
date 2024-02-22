@@ -22,6 +22,7 @@ import static org.springframework.security.test.web.servlet.request.SecurityMock
 import org.springframework.test.web.servlet.MockMvc;
 import hexlet.code.util.EntityGenerator;
 
+
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
@@ -102,11 +103,14 @@ public class UserControllerTest {
                 .with(token)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(om.writeValueAsString(data));
-        mockMvc.perform(request).andExpect(status().isCreated());
-        var user = userRepository.findByEmail(newUser.getEmail()).get();
+        mockMvc.perform(request)
+                .andExpect(status().isCreated());
+
+        var user = userRepository.findByEmail(data.getEmail()).get();
+
         assertNotNull(user);
-        assertThat(user.getFirstName()).isEqualTo(newUser.getFirstName());
-        assertThat(user.getLastName()).isEqualTo(newUser.getLastName());
+        assertThat(user.getFirstName()).isEqualTo(data.getFirstName());
+        assertThat(user.getLastName()).isEqualTo(data.getLastName());
         assertThat(encoder.matches(newUser.getPassword(), user.getPassword())).isTrue();
     }
     @Test
