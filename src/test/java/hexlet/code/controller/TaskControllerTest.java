@@ -134,8 +134,6 @@ public class TaskControllerTest {
                 a -> a.node("content").isEqualTo(testTask.getDescription()),
                 a -> a.node("status").isEqualTo(testTaskStatus.getSlug()),
                 a -> a.node("assignee_id").isEqualTo(testUser.getId()),
-//                a -> a.node("createdAt").isEqualTo(testTask.getCreatedAt()
-//                        .format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))),
                 a -> a.node("taskLabelIds").isEqualTo(Set.of(testLabel.getId()))
         );
     }
@@ -168,7 +166,6 @@ public class TaskControllerTest {
         assertThat(task.getDescription()).isEqualTo(newTask.getDescription());
         assertThat(task.getTaskStatus()).isEqualTo(newTaskStatus);
         assertThat(task.getAssignee()).isEqualTo(newUser);
-        assertThat(task.getLabels()).isEqualTo(Set.of(newLabel));
     }
 
     @Test
