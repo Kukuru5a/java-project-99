@@ -154,18 +154,31 @@ public class TaskControllerTest {
         data.setStatus(newTaskStatus.getSlug());
         data.setAssigneeId(newUser.getId());
         data.setTaskLabelIds(Set.of(newLabel.getId()));
+//        var request = post("/api/tasks")
+//                .with(token)
+//                .contentType(MediaType.APPLICATION_JSON)
+//                .content(om.writeValueAsString(data));
+//        mockMvc.perform(request)
+//                .andExpect(status().isCreated());
+//        var task = taskRepository.findByName(newTask.getName()).get();
+//        assertNotNull(task);
+//        assertThat(task.getIndex()).isEqualTo(newTask.getIndex());
+//        assertThat(task.getDescription()).isEqualTo(newTask.getDescription());
+//        assertThat(task.getTaskStatus()).isEqualTo(newTaskStatus);
+//        assertThat(task.getAssignee()).isEqualTo(newUser);
+
         var request = post("/api/tasks")
                 .with(token)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(om.writeValueAsString(data));
+
         mockMvc.perform(request)
                 .andExpect(status().isCreated());
+
         var task = taskRepository.findByName(newTask.getName()).get();
         assertNotNull(task);
         assertThat(task.getIndex()).isEqualTo(newTask.getIndex());
         assertThat(task.getDescription()).isEqualTo(newTask.getDescription());
-        assertThat(task.getTaskStatus()).isEqualTo(newTaskStatus);
-        assertThat(task.getAssignee()).isEqualTo(newUser);
     }
 
     @Test

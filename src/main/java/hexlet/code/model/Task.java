@@ -6,18 +6,20 @@ import jakarta.persistence.EntityListeners;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Column;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Temporal;
 import jakarta.persistence.FetchType;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
-import org.springframework.data.annotation.CreatedDate;
+import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import java.time.LocalDate;
+import java.util.Date;
 import java.util.Set;
 
 import static jakarta.persistence.GenerationType.IDENTITY;
+import static jakarta.persistence.TemporalType.TIMESTAMP;
 
 @Entity
 @Data
@@ -42,8 +44,10 @@ public class Task implements BaseEntity {
     @ManyToOne(fetch = FetchType.EAGER)
     private User assignee;
 
-    @CreatedDate
-    private LocalDate createdAt;
+    @CreationTimestamp
+    @Temporal(TIMESTAMP)
+    @Column(name = "created_at")
+    private Date createdAt;
 
     @ManyToMany(fetch = FetchType.EAGER)
     private Set<Label> labels;
