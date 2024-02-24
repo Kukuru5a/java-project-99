@@ -16,7 +16,7 @@ import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Set;
 
 import static jakarta.persistence.GenerationType.IDENTITY;
@@ -45,9 +45,9 @@ public class Task implements BaseEntity {
     private User assignee;
 
     @CreationTimestamp
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "created_at")
-    private LocalDate createdAt;
+    private LocalDateTime createdAt;
 
     @ManyToMany(fetch = FetchType.EAGER)
     private Set<Label> labels;
