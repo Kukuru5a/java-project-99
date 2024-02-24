@@ -9,6 +9,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.UserDetailsManager;
 import org.springframework.stereotype.Service;
 
+
 @Service
 public class CustomUserDetailsService implements UserDetailsManager {
 
@@ -16,7 +17,7 @@ public class CustomUserDetailsService implements UserDetailsManager {
     private UserRepository userRepository;
 
     @Autowired
-    private PasswordEncoder encoder;
+    private PasswordEncoder passwordEncoder;
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
@@ -28,7 +29,7 @@ public class CustomUserDetailsService implements UserDetailsManager {
     public void createUser(UserDetails userData) {
         var user = new User();
         user.setEmail(userData.getUsername());
-        var hashedPassword = encoder.encode(userData.getPassword());
+        var hashedPassword = passwordEncoder.encode(userData.getPassword());
         user.setPasswordOrigin(hashedPassword);
         userRepository.save(user);
     }
@@ -52,5 +53,4 @@ public class CustomUserDetailsService implements UserDetailsManager {
     public boolean userExists(String username) {
         throw new UnsupportedOperationException("Unimplemented method 'userExists'");
     }
-
 }

@@ -6,13 +6,15 @@ import jakarta.persistence.EntityListeners;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Column;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 
-import org.springframework.data.annotation.CreatedDate;
+import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import java.time.LocalDate;
+import java.sql.Date;
 
 import static jakarta.persistence.GenerationType.IDENTITY;
 
@@ -33,9 +35,8 @@ public class TaskStatus implements BaseEntity {
     @Column(unique = true)
     private String slug;
 
-//    @CreationTimestamp
-//    @Temporal(TIMESTAMP)
+    @CreationTimestamp
+    @Temporal(TemporalType.DATE)
     @Column(name = "created_at")
-    @CreatedDate
-    private LocalDate createdAt;
+    private Date createdAt;
 }

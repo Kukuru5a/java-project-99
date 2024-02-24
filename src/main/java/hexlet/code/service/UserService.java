@@ -5,6 +5,7 @@ import hexlet.code.dto.user.UserDTO;
 import hexlet.code.dto.user.UserUpdateDTO;
 import hexlet.code.mapper.UserMapper;
 import hexlet.code.repository.UserRepository;
+import hexlet.code.util.UserUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,8 +15,12 @@ import java.util.List;
 public class UserService {
     @Autowired
     private UserRepository userRepository;
+
     @Autowired
     private UserMapper userMapper;
+
+    @Autowired
+    private UserUtils userUtils;
 
     public List<UserDTO> getAll() {
         return userMapper.map(userRepository.findAll());
@@ -26,15 +31,15 @@ public class UserService {
         return userMapper.map(user);
     }
 
-    public UserDTO create(UserCreateDTO dto) {
-        var user = userMapper.map(dto);
+    public UserDTO create(UserCreateDTO userData) {
+        var user = userMapper.map(userData);
         userRepository.save(user);
         return userMapper.map(user);
     }
 
-    public UserDTO update(UserUpdateDTO dto, Long id) {
+    public UserDTO update(UserUpdateDTO userData, Long id) {
         var user = userRepository.findById(id).orElseThrow();
-        userMapper.update(dto, user);
+        userMapper.map(userData, user);
         userRepository.save(user);
         return userMapper.map(user);
     }

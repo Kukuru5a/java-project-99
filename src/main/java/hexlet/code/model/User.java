@@ -6,16 +6,18 @@ import jakarta.persistence.EntityListeners;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Column;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 import lombok.ToString;
-import org.springframework.data.annotation.CreatedDate;
+import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.time.LocalDate;
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -43,11 +45,13 @@ public class User implements UserDetails, BaseEntity {
     @ToString.Exclude
     private String passwordOrigin;
 
-    @CreatedDate
-    private LocalDate createdAt;
+    @CreationTimestamp
+    @Column(name = "created_at")
+    @Temporal(TemporalType.DATE)
+    private Date createdAt;
 
     @LastModifiedDate
-    private LocalDate updatedAt;
+    private Date updatedAt;
 
     @Override
     public String getPassword() {

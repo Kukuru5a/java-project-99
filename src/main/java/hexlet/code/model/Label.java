@@ -6,9 +6,11 @@ import jakarta.persistence.EntityListeners;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Column;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
-import org.springframework.data.annotation.CreatedDate;
+import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDate;
@@ -28,9 +30,8 @@ public class Label implements BaseEntity {
     @Column(unique = true)
     private String name;
 
-//    @CreationTimestamp
-//    @Temporal(TIMESTAMP)
+    @CreationTimestamp
+    @Temporal(TemporalType.DATE)
     @Column(name = "created_at")
-    @CreatedDate
     private LocalDate createdAt;
 }
