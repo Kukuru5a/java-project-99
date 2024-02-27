@@ -65,7 +65,11 @@ public abstract class TaskMapper {
     @Named("taskLabelIdsToLabels")
     public Set<Label> taskLabelIdsToLabels(Set<Long> taskLabelIds) {
         return taskLabelIds == null ? new HashSet<>() : taskLabelIds.stream()
-                .map(id -> labelRepository.findById(id).orElseThrow())
+                .map(id -> {
+                    var res = new Label();
+                    res.setId(id);
+                    return res;
+                })
                 .collect(Collectors.toSet());
     }
 
