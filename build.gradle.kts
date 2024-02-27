@@ -66,7 +66,9 @@ dependencies {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
-
+tasks.withType <JavaCompile> {
+    options.encoding = "UTF-8"
+}
 sentry {
     val env = System.getenv("APP_ENV")
     if (env != null && env.contentEquals("prod")) {
