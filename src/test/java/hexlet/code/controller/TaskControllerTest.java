@@ -176,9 +176,6 @@ public class TaskControllerTest {
         data.setIndex(JsonNullable.of(2023));
         data.setContent(JsonNullable.of("New content"));
 
-        ObjectMapper objectMapper = new ObjectMapper().enable(SerializationFeature.INDENT_OUTPUT);
-        String prettyJson = objectMapper.writeValueAsString(data);
-        logger.info("JSON Request: " + prettyJson);
         var request = put("/api/tasks/" + testTask.getId())
                 .with(token)
                 .contentType(MediaType.APPLICATION_JSON)
