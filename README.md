@@ -25,3 +25,9 @@ password: qwerty \
 
 * Dashboard provides the user with a nav bar through which there is a possibility to create Task, User, Label, Task status.
 ![img_1.png](img_1.png)
+
+* Admin is able to create the user, after waht the task can be attached to him.
+![img_2.png](img_2.png)
+
+* Task statuses may be attached by admin and user upon the task progression.
+![img_3.png](img_3.png)
